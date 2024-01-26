@@ -18,7 +18,7 @@ index.interceptors.request.use(
 index.interceptors.response.use(
     (response) => {
         console.log('axios response: ', response);
-        return response;
+        return response.data;
     },
     (error) => {
         console.log('axios response error: ', error);
