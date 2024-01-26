@@ -4,7 +4,11 @@ import { ProductService } from "./api/product.api.ts";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
-        <Route path="/" element={<App/>} loader={ProductService.getProductList}>
+        <Route path="/" element={<App/>}
+               loader={() => ProductService.getProductList({
+                   skip: 0,
+                   limit: 20
+               })}>
         </Route>
     )
 );
