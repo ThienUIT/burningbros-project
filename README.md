@@ -1,10 +1,13 @@
 # BurningBros Assignment
+
 - Our goal is to create a simple web application that allows users to search for products.
 
 # Demo
+
 - [Live Demo](https://burningbros-project.vercel.app/products)
 
 # Require
+
 - Node.js 18 / 20+ is now required.
 - Windows 10 / 11, macOS Big Sur, and Linux are supported.
 - Yarn 1.22.5+ is required to install dependencies optimally.
@@ -12,18 +15,27 @@
 - Visual Studio Code 1.60.0+ is recommended for optimal development experience.
 
 # Installation
+
 - Clone the project
 - Run `yarn install` to install dependencies
 - Run `yarn dev` to start the development server
 - Open `http://localhost:4000` in your browser
 
+# Build
+
+- Run `yarn build`
+- Run `yarn preview` to test the App Locally
+- Open `http://localhost:5000` in your browser
+
 # Features
+
 - [x] React 17
 - [x] TypeScript 4.4
 - [x] Vite 2.6
 - [x] Tailwind CSS 2.2
 
 # Folder Structure
+
 ``` 
 src
 ├── api
@@ -34,4 +46,5 @@ src
 ```
 
 # Tech Frontend Stack
+
 React + TypeScript + Vite
