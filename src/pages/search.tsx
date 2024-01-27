@@ -1,9 +1,9 @@
 import ListProduct from "../components/list-product.tsx";
-import { useLoaderData, useNavigate } from "react-router-dom";
-import { ProductsResponse } from "../type/product.type.ts";
+import { Link, useLoaderData } from "react-router-dom";
+import { ProductsResponse } from "../utils/type/product.type.ts";
+import { ROUTE_PATH } from "../utils/const/route-path.ts";
 
 export default function SearchPage() {
-  const navigate = useNavigate();
   const data = useLoaderData() as ProductsResponse;
 
   if (!data.total) {
@@ -21,12 +21,13 @@ export default function SearchPage() {
     <div className="flex flex-col items-center gap-4 p-4">
       <div className="flex items-center justify-center gap-4">
         <h1 className="text-2xl font-bold">Search results</h1>
-        <button
+        <Link
+          to={ROUTE_PATH.ROOT}
           className="text-white bg-blue-500 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-          onClick={() => navigate("/")}
+          type="button"
         >
           Go back
-        </button>
+        </Link>
       </div>
       <ListProduct props={data.products} />
     </div>

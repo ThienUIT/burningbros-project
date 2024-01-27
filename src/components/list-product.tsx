@@ -1,4 +1,4 @@
-import { ProductType } from "../type/product.type.ts";
+import { ProductType } from "../utils/type/product.type.ts";
 import SingleProductCard from "./single-product-card.tsx";
 
 export default function ListProduct({ props }: { props: ProductType[] }) {

@@ -1,17 +1,26 @@
-import { Form, useSearchParams } from "react-router-dom";
-import { useMemo, useState } from "react";
+import { Form, useLocation, useSearchParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { ROUTE_PATH } from "../utils/const/route-path.ts";
 
 export default function SearchableBar() {
   const [searchParams] = useSearchParams();
-  const query = useMemo(() => searchParams.get("q") ?? "", [searchParams]);
+  const location = useLocation();
+  console.log(location.pathname);
 
   const [search, setSearch] = useState(() => {
-    return query;
+    return searchParams.get("q") ?? "";
   });
+
   const onHandleSearch = (e: any) => {
     e.preventDefault();
     setSearch(e.target.value);
   };
+
+  useEffect(() => {
+    if (location.pathname.includes(ROUTE_PATH.PRODUCTS)) {
+      setSearch("");
+    }
+  }, [location.pathname]);
 
   return (
     <Form className="container" method={"GET"} action="/search">

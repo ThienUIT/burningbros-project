@@ -1,6 +1,6 @@
 import httpClient from "./index";
-import { ProductsResponse } from "../type/product.type.ts";
-import { Pagination } from "../type/common.type.ts";
+import { ProductsResponse } from "../utils/type/product.type.ts";
+import { Pagination } from "../utils/type/common.type.ts";
 
 const productPath = "/products";
 export const ProductService = {
@@ -18,7 +18,7 @@ export const ProductService = {
       throw new Error(String(error));
     }
   },
-  searchProduct: async (searchTerm: string) => {
+  searchProduct: async (searchTerm: string): Promise<ProductsResponse> => {
     const query = `q=${searchTerm}`;
     try {
       return await httpClient.get(`${productPath}/search/?${query}`);
