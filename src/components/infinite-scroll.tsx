@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { ProductService } from "../api/product.api.ts";
-import { ProductsResponse, ProductType } from "../type/product.type.ts";
+import { ProductsResponse, ProductType } from "../utils/type/product.type.ts";
 import ListProduct from "./list-product.tsx";
 
 export default function InfiniteScroll(props: ProductsResponse) {

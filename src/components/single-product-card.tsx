@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { ProductType } from "../type/product.type.ts";
+import { ProductType } from "../utils/type/product.type.ts";
 
 export default function SingleProductCard({
   title,
