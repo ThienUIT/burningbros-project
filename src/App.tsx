@@ -1,14 +1,9 @@
-import ListProduct from "./components/list-product.tsx";
 import { useLoaderData } from "react-router-dom";
-import { LoaderProductType } from "./type/product.type.ts";
+import InfiniteScroll from "./components/infinite-scroll.tsx";
+import { ProductsResponse } from "./type/product.type.ts";
 
+export default function App() {
+  const data = useLoaderData() as ProductsResponse;
 
-function App() {
-    const data = useLoaderData() as LoaderProductType;
-
-    return (
-        <ListProduct {...data}/>
-    );
+  return <InfiniteScroll {...data} />;
 }
-
-export default App
