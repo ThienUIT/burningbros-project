@@ -1,13 +1,14 @@
+import ListProduct from "./components/list-product.tsx";
 import { useLoaderData } from "react-router-dom";
+import { LoaderProductType } from "./type/product.type.ts";
+
 
 function App() {
-    const product = useLoaderData();
-    console.log(product);
+    const data = useLoaderData() as LoaderProductType;
+
     return (
-        <h1 className="text-5xl font-bold underline">
-            Hello world!
-        </h1>
-    )
+        <ListProduct {...data}/>
+    );
 }
 
 export default App
