@@ -1,9 +1,6 @@
-function App() {
-    return (
-        <h1 className="text-5xl font-bold underline">
-            Hello world!
-        </h1>
-    )
-}
+import { Navigate } from "react-router-dom";
+import { ROUTE_PATH } from "./utils/const/route-path.ts";
 
-export default App
+export default function App() {
+  return <Navigate to={ROUTE_PATH.PRODUCTS} replace={true} />;
+}
