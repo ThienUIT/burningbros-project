@@ -1,4 +1,8 @@
 # BurningBros Assignment
+- Our goal is to create a simple web application that allows users to search for products.
+
+# Demo
+- [Live Demo](https://burningbros-project.vercel.app/products)
 
 # Require
 - Node.js 18 / 20+ is now required.
