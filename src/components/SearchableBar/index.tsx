@@ -1,6 +1,6 @@
-import { Form, useLocation, useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { ROUTE_PATH } from "../utils/const/route-path.ts";
+import { Form, useLocation, useSearchParams } from "react-router-dom";
+import { ROUTE_PATH } from "../../utils/const/route-path.ts";
 
 export default function SearchableBar() {
   const [searchParams] = useSearchParams();
@@ -23,7 +23,7 @@ export default function SearchableBar() {
   }, [location.pathname]);
 
   return (
-    <Form className="container" method={"GET"} action="/search">
+    <Form className="container" method={"GET"} action="/src/pages/Search/search">
       <label
         htmlFor="q"
         className="mb-2 text-sm font-medium text-gray-900 sr-only"
