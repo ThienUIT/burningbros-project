@@ -3,6 +3,6 @@ import { useLoaderData } from "react-router-dom";
 import { ProductsResponse } from "../utils/type/product.type.ts";
 
 export default function ProductPage() {
-  const data = useLoaderData() as ProductsResponse;
-  return <InfiniteScroll {...data} />;
+  const loadData = useLoaderData() as ProductsResponse;
+  return <InfiniteScroll {...loadData} />;
 }
