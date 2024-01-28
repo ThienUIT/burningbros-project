@@ -11,9 +11,7 @@ export default function ListProduct({ props }: { props: ProductType[] }) {
       ))}
       <button
         onClick={scrollToTop}
-        className="fixed bottom-0 right-0 p-3 rounded-full bg-blue-500 text-white hover:bg-blue-400 transition 
-        ease-in-out duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 
-        focus:ring-opacity-60"
+        className="button-scroll-top"
       >
         TOP
       </button>

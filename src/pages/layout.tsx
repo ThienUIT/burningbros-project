@@ -6,7 +6,7 @@ import Loading from "../components/loading.tsx";
 export default function Layout() {
   return (
     <Suspense fallback={<Loading />}>
-      <div className="flex flex-col items-center gap-4 p-4">
+      <div className="flex flex-col items-center gap-4 p-4 h-screen">
         <SearchableBar />
         <Outlet />
       </div>

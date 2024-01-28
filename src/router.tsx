@@ -28,7 +28,6 @@ const router = createBrowserRouter(
     >
       <Route index element={<App />} />
       <Route
-        index
         path={removeSlash(ROUTE_PATH.PRODUCTS)}
         element={<ProductPage />}
         loader={async () =>
