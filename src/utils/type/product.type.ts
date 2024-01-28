@@ -1,7 +1,7 @@
 import { Pagination } from "./common.type.ts";
 
 export type ProductType = {
-  id: string;
+  id: number;
   title: string;
   price: number;
   thumbnail: string;
