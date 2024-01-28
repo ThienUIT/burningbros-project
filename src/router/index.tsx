@@ -4,16 +4,14 @@ import {
   createRoutesFromElements,
   Route,
 } from "react-router-dom";
-import { ProductService } from "./api/product.api.ts";
-import { ROUTE_PATH } from "./utils/const/route-path.ts";
+import { ProductService } from "../api/product.api.ts";
+import { ROUTE_PATH } from "../utils/const/route-path.ts";
 
-const SearchPage = React.lazy(() => import("./pages/search.tsx"));
-const Layout = React.lazy(() => import("./pages/layout.tsx"));
-const ProductPage = React.lazy(() => import("./pages/product.tsx"));
-const App = React.lazy(() => import("./App.tsx"));
-const ErrorBoundary = React.lazy(
-  () => import("./components/error-boundary.tsx"),
-);
+const SearchPage = React.lazy(() => import("../pages/Search"));
+const Layout = React.lazy(() => import("../pages/Layout"));
+const ProductPage = React.lazy(() => import("../pages/Product"));
+const App = React.lazy(() => import("../App.tsx"));
+const ErrorBoundary = React.lazy(() => import("../components/ErrorBoundary"));
 
 const removeSlash = (value: string) => {
   return value.replace("/", "");
@@ -28,7 +26,6 @@ const router = createBrowserRouter(
     >
       <Route index element={<App />} />
       <Route
-        index
         path={removeSlash(ROUTE_PATH.PRODUCTS)}
         element={<ProductPage />}
         loader={async () =>
