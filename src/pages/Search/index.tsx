@@ -1,7 +1,7 @@
-import ListProduct from "../components/list-product.tsx";
 import { Link, useLoaderData } from "react-router-dom";
-import { ProductsResponse } from "../utils/type/product.type.ts";
-import { ROUTE_PATH } from "../utils/const/route-path.ts";
+import { ProductsResponse } from "../../utils/type/product.type.ts";
+import { ROUTE_PATH } from "../../utils/const/route-path.ts";
+import ListProduct from "../../components/ListProduct";
 
 export default function SearchPage() {
   const data = useLoaderData() as ProductsResponse;

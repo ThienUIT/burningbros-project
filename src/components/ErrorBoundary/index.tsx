@@ -1,7 +1,7 @@
 import { Link, useRouteError } from "react-router-dom";
 
 export default function ErrorBoundary() {
-  let error = useRouteError() as Error;
+  const error = useRouteError() as Error;
   console.error(error);
   const goBack = () => history.back();
   return (

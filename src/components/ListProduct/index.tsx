@@ -1,5 +1,5 @@
-import { ProductType } from "../utils/type/product.type.ts";
-import SingleProductCard from "./single-product-card.tsx";
+import SingleProductCard from "../SingleProductCard";
+import { ProductType } from "../../utils/type/product.type.ts";
 
 export default function ListProduct({ props }: { props: ProductType[] }) {
   const scrollToTop = () => window.scrollTo(0, 0);

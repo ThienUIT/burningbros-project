@@ -1,10 +1,13 @@
 import { CSSProperties, useCallback, useRef, useState } from "react";
-import { ProductService } from "../api/product.api.ts";
-import { ProductsResponse, ProductType } from "../utils/type/product.type.ts";
 import { FixedSizeGrid as Grid, GridOnItemsRenderedProps } from "react-window";
 import AutoSizer from "react-virtualized-auto-sizer";
-import SingleProductCard from "./single-product-card.tsx";
-import useCheckMobileScreen from "../utils/hook/check-screen.hook.ts";
+import SingleProductCard from "../SingleProductCard";
+import useCheckMobileScreen from "../../utils/hook/check-screen.hook.ts";
+import {
+  ProductsResponse,
+  ProductType,
+} from "../../utils/type/product.type.ts";
+import { ProductService } from "../../api/product.api.ts";
 
 export default function InfiniteScroll(props: ProductsResponse) {
   const isMobile = useCheckMobileScreen();
